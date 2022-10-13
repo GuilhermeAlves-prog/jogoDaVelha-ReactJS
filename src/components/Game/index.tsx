@@ -13,7 +13,7 @@ export function Game() {
   const [columnOrRowWinnerColor, setColumnOrRowWinnerColor] = useState('')
 
   interface GameMessegeProps {
-    playng: string;
+    [playng:string]: string;
     win: string;
     Atie: string;
   }
