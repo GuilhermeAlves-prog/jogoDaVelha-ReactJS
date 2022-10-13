@@ -17,4 +17,8 @@ export const MyGlobalStyle = createGlobalStyle`
   body {
     background: var(--blue);
   }
+
+  body, button {
+    font-family: 'Nunito', sans-serif;
+  }
 `;

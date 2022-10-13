@@ -4,50 +4,84 @@ import { Button, ButtonsWrapper, Container, DivsWrapper } from "./style";
 export function Game() {
   const keys = [0, 1, 2, 3, 4, 5, 6, 7, 8]
   const [typeUser, setTypeUser] = useState('')
-
   const [plays, setPlays] = useState(['', '', '',
                                       '', '', '',
                                       '', '', ''])
+                                   
   const [gameState,setGameState] = useState('playng')
+  const [winner, setWinner] = useState('')
+  const [columnOrRowWinnerColor, setColumnOrRowWinnerColor] = useState('')
 
+  interface GameMessegeProps {
+    playng: string;
+    win: string;
+    Atie: string;
+  }
+
+  const gameMessege: GameMessegeProps = {
+    playng : '',
+    win: 'Vencedor',
+    Atie: 'Empatou'
+  }
 
   function verifyWin() {
     if(plays[0] != '' && plays[1] != '' && plays[0] == plays[1] && plays[2] != '' && plays[1] == plays[2]) {
       setGameState('win')
-      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser('')},5000)
+      setWinner(plays[0] && plays[1] && plays[2] == 'X' ? 'X' : 'O')
+      setColumnOrRowWinnerColor('line-1')
+      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser(''),setWinner(''),setColumnOrRowWinnerColor('')},3000)
     } else if(plays[3] != '' && plays[4] != '' && plays[3] == plays[4] && plays[5] != '' && plays[4] == plays[5]) {
       setGameState('win')
-      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser('')},5000)
+      setWinner(plays[3] && plays[4] && plays[5] == 'X' ? 'X' : 'O')
+      setColumnOrRowWinnerColor('line-2')
+      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser(''),setWinner(''),setColumnOrRowWinnerColor('')},3000)
     } else if(plays[6] != '' && plays[7] != '' && plays[6] == plays[7] && plays[8] != '' && plays[6] == plays[8]) {
       setGameState('win')
-      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser('')},5000)
+      setWinner(plays[6] && plays[7] && plays[8] == 'X' ? 'X' : 'O')
+      setColumnOrRowWinnerColor('line-3')
+      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser(''),setWinner(''),setColumnOrRowWinnerColor('')},3000)
     } else if(plays[0] != '' && plays[3] != '' && plays[0] == plays[3] && plays[6] != '' && plays[3] == plays[6]) {
       setGameState('win')
-      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser('')},5000)
+      setWinner(plays[0] && plays[3] && plays[6] == 'X' ? 'X' : 'O')
+      setColumnOrRowWinnerColor('column-1')
+      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser(''),setWinner(''),setColumnOrRowWinnerColor('')},3000)
     } else if(plays[1] != '' && plays[4] != '' && plays[1] == plays[4] && plays[7] != '' && plays[4] == plays[7]) {
       setGameState('win')
-      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser('')},5000)
+      setWinner(plays[1] && plays[4] && plays[7] == 'X' ? 'X' : 'O')
+      setColumnOrRowWinnerColor('column-2')
+      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser(''),setWinner(''),setColumnOrRowWinnerColor('')},3000)
     } else if(plays[2] != '' && plays[5] != '' && plays[2] == plays[5] && plays[8] != '' && plays[5] == plays[8]) {
       setGameState('win')
-      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser('')},5000)
+      setWinner(plays[2] && plays[5] && plays[8] == 'X' ? 'X' : 'O')
+      setColumnOrRowWinnerColor('column-3')
+      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser(''),setWinner(''),setColumnOrRowWinnerColor('')},3000)
     } else if(plays[0] != '' && plays[4] != '' && plays[0] == plays[4] && plays[8] != '' && plays[4] == plays[8]) {
       setGameState('win')
-      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser('')},5000)
+      setWinner(plays[0] && plays[4] && plays[8] == 'X' ? 'X' : 'O')
+      setColumnOrRowWinnerColor('center-left')
+      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser(''),setWinner(''),setColumnOrRowWinnerColor('')},3000)
     } else if(plays[6] != '' && plays[4] != '' && plays[6] == plays[4] && plays[2] != '' && plays[4] == plays[2]) {
       setGameState('win')
-      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser('')},5000)
+      setWinner(plays[6] && plays[4] && plays[2] == 'X' ? 'X' : 'O')
+      setColumnOrRowWinnerColor('center-right')
+      setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser(''),setWinner(''),setColumnOrRowWinnerColor('')},3000)
+    } else {
+      if(plays[0] && plays[2] && plays[3] && plays[4] && plays[5] && plays[6] && plays[7] && plays[8] != '') {
+        setGameState('Atie')
+        setTimeout(()=> {setPlays(['', '', '','', '', '','', '', '']),setGameState('playng'),setTypeUser(''),setWinner(''),setColumnOrRowWinnerColor('')},3000)
+      }
     }
   }
 
   useEffect( () => {
     verifyWin()
-    console.log(typeUser)
+    console.log(columnOrRowWinnerColor)
   },[plays, typeUser])
 
   return (
     <Container>
-
-      <DivsWrapper>
+      <h1>{gameMessege[gameState]}  {winner}</h1>
+      <DivsWrapper columnOrRowWinnerColor={columnOrRowWinnerColor}>
         {keys.map(key => <div key={key} onClick={() => {
           switch (key) {
             case 0:
