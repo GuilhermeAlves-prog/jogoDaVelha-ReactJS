@@ -21,8 +21,23 @@ acesse o jogo clicando [aqui](https://jogodavelhareact-js.netlify.app/)
 
 ## Baixar para sua máquina e testar ?
 
-`Git clone https://github.com/GuilhermeAlves-prog/jogoDaVelha-ReactJS`
-<br><br>
-`yarn` ou `npm install`
-<br><br>
-`yarn dev` ou `npx dev`
+```sh
+$ git clone https://github.com/GuilhermeAlves-prog/jogoDaVelha-ReactJS
+```
+```sh
+$ yarn 
+```
+ou
+```sh
+$ npm install
+```
+
+```sh
+$ yarn dev
+```
+ou
+```sh
+$ npx dev
+```
+
+
