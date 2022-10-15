@@ -2,7 +2,7 @@
 
 ## Sobre
 
-Um jogo da velha simples e divertido, você poderar escolhar se quer começar com X ou e ao ganhar a sequencia ficara verde e aparecera uma mensagem como forma de passar um feedback pros jogadores.
+Um jogo da velha divertido feito com React, você poderar escolhar se quer começar com X ou O e ao ganhar a sequencia ficara verde e aparecera uma mensagem como forma de passar um feedback para os jogadores.
 
 ### Ferramentas
 - figma
