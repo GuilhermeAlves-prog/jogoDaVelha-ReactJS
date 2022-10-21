@@ -82,7 +82,7 @@ export function Game() {
     <Container>
       <h1>{gameMessege[gameState]}  {winner}</h1>
       <DivsWrapper columnOrRowWinnerColor={columnOrRowWinnerColor}>
-        {keys.map(key => <div key={key} onClick={() => {
+        {keys.map(key => <div  role="button" key={key} onClick={() => {
           switch (key) {
             case 0:
               if (plays[0] == '' && gameState == 'playng') {

@@ -36,39 +36,39 @@ export const DivsWrapper = styled.div<DivsProps>`
 
     
     div:nth-of-type(1) {
-      color: ${(props) => props.columnOrRowWinnerColor == 'line-1' ||props.columnOrRowWinnerColor == 'column-1' || props.columnOrRowWinnerColor == 'center-left' ? '#66EF50' : ''};
+      color: ${(props) => props.columnOrRowWinnerColor == 'line-1' ||props.columnOrRowWinnerColor == 'column-1' || props.columnOrRowWinnerColor == 'center-left' ? '#22C55E' : ''};
     }
 
     div:nth-of-type(2) {
-      color: ${(props) => props.columnOrRowWinnerColor == 'line-1' ||props.columnOrRowWinnerColor == 'column-2' ? '#66EF50' : ''};
+      color: ${(props) => props.columnOrRowWinnerColor == 'line-1' ||props.columnOrRowWinnerColor == 'column-2' ? '#22C55E' : ''};
     }
     
     div:nth-of-type(3) {
-      color: ${(props) => props.columnOrRowWinnerColor == 'line-1' || props.columnOrRowWinnerColor == 'column-3' || props.columnOrRowWinnerColor == 'center-right' ? '#66EF50' : ''};
+      color: ${(props) => props.columnOrRowWinnerColor == 'line-1' || props.columnOrRowWinnerColor == 'column-3' || props.columnOrRowWinnerColor == 'center-right' ? '#22C55E' : ''};
     }
 
     div:nth-of-type(4) {
-      color: ${(props) => props.columnOrRowWinnerColor == 'line-2' || props.columnOrRowWinnerColor == 'column-1' ? '#66EF50' : ''};
+      color: ${(props) => props.columnOrRowWinnerColor == 'line-2' || props.columnOrRowWinnerColor == 'column-1' ? '#22C55E' : ''};
     }
 
     div:nth-of-type(5) {
-      color: ${(props) => props.columnOrRowWinnerColor == 'line-2' || props.columnOrRowWinnerColor == 'column-2' || props.columnOrRowWinnerColor == 'center-left' || props.columnOrRowWinnerColor == 'center-right' ? '#66EF50' : ''};
+      color: ${(props) => props.columnOrRowWinnerColor == 'line-2' || props.columnOrRowWinnerColor == 'column-2' || props.columnOrRowWinnerColor == 'center-left' || props.columnOrRowWinnerColor == 'center-right' ? '#22C55E' : ''};
     }
 
     div:nth-of-type(6) {
-      color: ${(props) => props.columnOrRowWinnerColor == 'line-2' || props.columnOrRowWinnerColor == 'column-3' ? '#66EF50' : ''};
+      color: ${(props) => props.columnOrRowWinnerColor == 'line-2' || props.columnOrRowWinnerColor == 'column-3' ? '#22C55E' : ''};
     }
 
     div:nth-of-type(7) {
-      color: ${(props) => props.columnOrRowWinnerColor == 'line-3' || props.columnOrRowWinnerColor == 'column-1' || props.columnOrRowWinnerColor == 'center-right' ? '#66EF50' : ''};
+      color: ${(props) => props.columnOrRowWinnerColor == 'line-3' || props.columnOrRowWinnerColor == 'column-1' || props.columnOrRowWinnerColor == 'center-right' ? '#22C55E' : ''};
     }
 
     div:nth-of-type(8) {
-      color: ${(props) => props.columnOrRowWinnerColor == 'line-3' || props.columnOrRowWinnerColor == 'column-2' ? '#66EF50' : ''};
+      color: ${(props) => props.columnOrRowWinnerColor == 'line-3' || props.columnOrRowWinnerColor == 'column-2' ? '#22C55E' : ''};
     }
 
     div:nth-of-type(9) {
-      color: ${(props) => props.columnOrRowWinnerColor == 'line-3' || props.columnOrRowWinnerColor == 'column-3' || props.columnOrRowWinnerColor == 'center-left' ? '#66EF50' : ''};
+      color: ${(props) => props.columnOrRowWinnerColor == 'line-3' || props.columnOrRowWinnerColor == 'column-3' || props.columnOrRowWinnerColor == 'center-left' ? '#22C55E' : ''};
     }
 
 /* columns */
